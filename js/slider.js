@@ -2,24 +2,36 @@
 	var init = function () {
 		__attachEvents();
 	},
-
 	__attachEvents = function () {
 		$( '.slider-nav-item--dot' ).click( handleClickNavButton );
 	},
 
-	handleClickNavButton = function () {
-		var index = navButton.index( this ),
+	handleClickNavButton = function ( element ) {
+		var navButton = $( '.slider-nav-item--dot' ),
+			index = navButton.index( this ),
 			activeClass = 'active';
 
 		navButton.removeClass( activeClass );
 		$( this ).addClass( activeClass );
 
-		moveSlider( index );
-	},
-
-	moveSlider = function ( index ) {
-		$( '.slider-line' ).animate( {left: ( -index * 100 ) + '%'}, 400 );
+		slider.move( index );
 	};
+
+	// slider object
+	var slider = (function () {
+		var slider = $( '.slider-line' );
+
+		_move = function ( index ) {
+			slider.animate( {left: ( -index * 100 ) + '%'}, 400 );
+		};
+
+		return {
+			move: function ( index ) {
+				_move( index );
+			}
+		}
+	})();
+
 
 	$( document ).ready( function () {
 		init();
