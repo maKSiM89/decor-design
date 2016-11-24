@@ -21,14 +21,12 @@ header {
 
 .container {
   position: relative;
-  text-align: center;
-  width: 800px;
-  margin: 0 auto; }
+  text-align: center; }
   .container .slider {
     position: relative;
     padding: 15px 0;
-    border-bottom: 2px solid #e0e0e0;
-    width: 100%;
+    width: 800px;
+    margin: 0 auto;
     overflow: hidden; }
     .container .slider .slider-line {
       position: relative;
@@ -62,7 +60,8 @@ header {
             background-color: #fff;
             cursor: default; }
   .container .categories {
-    text-align: center; }
+    text-align: center;
+    border-top: 2px solid #e0e0e0; }
     .container .categories a {
       display: inline-block;
       width: 300px;

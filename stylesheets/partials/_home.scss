@@ -1,14 +1,12 @@
 .container {
   position: relative;
   text-align: center;
-  width: 800px;
-  margin: 0 auto;
 
   .slider {
     position: relative;
     padding: 15px 0;
-    border-bottom: 2px solid #e0e0e0;
-    width: 100%;
+    width: 800px;
+    margin: 0 auto;
     overflow: hidden;
 
     .slider-line {
@@ -59,6 +57,7 @@
 
   .categories {
     text-align: center;
+    border-top: 2px solid #e0e0e0;
 
     a {
       display: inline-block;
