@@ -1,27 +1,27 @@
 ;(function () {
-	var navButton = $( '.slider-nav-item--dot' ),
-		currentIndex = 0,
-		activeClass = 'active';
+	var init = function () {
+		__attachEvents();
+	},
 
-	navButton.click( function () {
-		var index = navButton.index( this );
+	__attachEvents = function () {
+		$( '.slider-nav-item--dot' ).click( handleClickNavButton );
+	},
+
+	handleClickNavButton = function () {
+		var index = navButton.index( this ),
+			activeClass = 'active';
 
 		navButton.removeClass( activeClass );
 		$( this ).addClass( activeClass );
 
-		move( index );
+		moveSlider( index );
+	},
+
+	moveSlider = function ( index ) {
+		$( '.slider-line' ).animate( {left: ( -index * 100 ) + '%'}, 400 );
+	};
+
+	$( document ).ready( function () {
+		init();
 	});
-
-	function move ( index ) {
-		var offset;
-
-		if ( index > currentIndex ) {
-			offset = -index * 100;
-		} else {
-			offset = index * 100;
-		}
-
-		$( '.slider-line' ).animate( {left: offset + '%'}, 400 );
-	}
-
 })();
