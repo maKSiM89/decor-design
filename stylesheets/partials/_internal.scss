@@ -1,0 +1,37 @@
+.container {
+
+  &.interior {
+    margin: 40px 0 0px 0;
+
+    .left-menu {
+      text-align: left;
+      flex-basis: 18%;
+      padding-top: 80px;
+
+      nav {
+        ul {
+          li {
+            padding: 10px;
+
+            &.active {
+              background-color: #d5d5d5;
+            }
+          }
+        }
+      }
+    }
+
+    .content {
+      flex-flow: row wrap;
+      align-content: stretch;
+
+      .box {
+        padding: 20px;
+
+        img {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

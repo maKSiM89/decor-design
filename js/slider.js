@@ -3,10 +3,12 @@
 		__attachEvents();
 	},
 	__attachEvents = function () {
-		$( '.slider-nav-item--dot' ).click( handleClickNavButton );
+		$( document ).on( 'click', '.slider-nav-item--dot', handleClickNavButton );
+		$( document ).on( 'swipeleft', handleSwipeSlider );
 	},
 
-	handleClickNavButton = function ( element ) {
+	handleClickNavButton = function ( event ) {
+		console.log( this );
 		var navButton = $( '.slider-nav-item--dot' ),
 			index = navButton.index( this ),
 			activeClass = 'active';
@@ -15,7 +17,12 @@
 		$( this ).addClass( activeClass );
 
 		slider.move( index );
-	};
+	},
+
+	handleSwipeSlider = function () {
+		console.log( event );
+		console.log( this );
+	}
 
 	// slider object
 	var slider = (function () {

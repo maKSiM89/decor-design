@@ -1,6 +1,15 @@
+// general
 @import "variables";
+@import "structure";
 
+// partials
 @import "partials/header";
 @import "partials/home";
 @import "partials/footer";
+@import "partials/internal";
+
+// components
 @import "components/link";
+
+// general
+@import "general";

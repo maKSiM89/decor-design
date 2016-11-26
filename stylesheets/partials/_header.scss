@@ -6,7 +6,7 @@ header {
 
   .logo {
     img {
-      max-width: 300px;
+      max-width: 200px;
     }
   }
 
@@ -15,10 +15,6 @@ header {
 
     li {
       display: inline-block;
-
-      a {
-        text-transform: uppercase;
-      }
     }
 
     li + li:before {

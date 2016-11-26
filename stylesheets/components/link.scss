@@ -1,9 +1,9 @@
 a {
   color: #000;
-}
 
-a:hover {
-  cursor: pointer;
-  color: #000;
-  text-decoration: none;
+  &:hover, &:active, &:visited, &:focus {
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+  }
 }

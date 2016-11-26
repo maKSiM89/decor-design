@@ -1,16 +1,49 @@
+.align-center-h {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.align-right-h {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+
+.align-left-h {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; }
+
+.align-center-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.align-bottom-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
+
+.align-top-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+
+.align-stretch-h {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; }
+
 header {
   position: relative;
   text-align: center;
   border-bottom: 2px solid #e0e0e0;
   padding-top: 20px; }
   header .logo img {
-    max-width: 300px; }
+    max-width: 200px; }
   header .menu {
     margin-top: 45px; }
     header .menu li {
       display: inline-block; }
-      header .menu li a {
-        text-transform: uppercase; }
     header .menu li + li:before {
       content: '|';
       padding: 0 10px; }
@@ -84,12 +117,41 @@ footer {
     footer p.social a img {
       width: 30px; }
 
+.container.interior {
+  margin: 40px 0 0px 0; }
+  .container.interior .left-menu {
+    text-align: left;
+    flex-basis: 18%;
+    padding-top: 80px; }
+    .container.interior .left-menu nav ul li {
+      padding: 10px; }
+      .container.interior .left-menu nav ul li.active {
+        background-color: #d5d5d5; }
+  .container.interior .content {
+    flex-flow: row wrap;
+    align-content: stretch; }
+    .container.interior .content .box {
+      padding: 20px; }
+      .container.interior .content .box img {
+        margin-bottom: 15px; }
+
 a {
   color: #000; }
+  a:hover, a:active, a:visited, a:focus {
+    cursor: pointer;
+    color: #000;
+    text-decoration: none; }
 
-a:hover {
-  cursor: pointer;
-  color: #000;
-  text-decoration: none; }
+.upcase {
+  text-transform: uppercase; }
+
+.lowcase {
+  text-transform: uppercase; }
+
+.strong {
+  font-weight: bold; }
+
+.list-style-none {
+  list-style: none; }
 
 /*# sourceMappingURL=main.css.map */
