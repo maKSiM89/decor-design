@@ -5,7 +5,7 @@
   .slider {
     position: relative;
     padding: 15px 0;
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
 
@@ -61,7 +61,7 @@
 
     a {
       display: inline-block;
-      width: 300px;
+      max-width: 300px;
       padding: 20px;
 
       img {

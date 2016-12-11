@@ -40,17 +40,58 @@ header {
   padding-top: 20px; }
   header .logo img {
     max-width: 200px; }
-  header .menu {
+  header .main-menu {
     margin-top: 45px; }
-    header .menu li {
+    header .main-menu li {
       display: inline-block; }
-    header .menu li + li:before {
+    header .main-menu li + li:before {
       content: '|';
       padding: 0 10px; }
-  header .info {
+  header .mobile-menu,
+  header a.openMobileMenu {
+    display: none; }
+  @media screen and (max-width: 736px) {
+    header .main-menu {
+      display: none; }
+    header a.openMobileMenu,
+    header a.closeMobileMenu {
+      display: block;
+      width: 24px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      margin: 0; }
+      header a.openMobileMenu span,
+      header a.closeMobileMenu span {
+        height: 5px;
+        margin-bottom: 3px;
+        background-color: #000;
+        display: block; }
+    header .mobile-menu {
+      display: none;
+      position: fixed;
+      right: 0;
+      top: 0; }
+      header .mobile-menu.is-open {
+        display: block;
+        background-color: #ebebeb;
+        text-align: left;
+        width: 320px;
+        height: 100%;
+        padding: 10px;
+        z-index: 10; }
+      header .mobile-menu ul li {
+        padding: 7px 0; } }
+  header .contact-info {
     position: absolute;
     right: 20px;
     bottom: 10px; }
+  @media screen and (max-width: 736px) {
+    header .contact-info {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      margin: 20px; } }
 
 .container {
   position: relative;
@@ -58,7 +99,7 @@ header {
   .container .slider {
     position: relative;
     padding: 15px 0;
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
     overflow: hidden; }
     .container .slider .slider-line {
@@ -97,7 +138,7 @@ header {
     border-top: 2px solid #e0e0e0; }
     .container .categories a {
       display: inline-block;
-      width: 300px;
+      max-width: 300px;
       padding: 20px; }
       .container .categories a img {
         max-width: 200px;

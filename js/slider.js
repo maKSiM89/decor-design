@@ -2,6 +2,7 @@
 	var init = function () {
 		__attachEvents();
 	},
+
 	__attachEvents = function () {
 		$( document ).on( 'click', '.slider-nav-item--dot', handleClickNavButton );
 		$( document ).on( 'swipeleft', handleSwipeSlider );

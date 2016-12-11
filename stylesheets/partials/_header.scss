@@ -10,7 +10,7 @@ header {
     }
   }
 
-  .menu {
+  .main-menu {
     margin-top: 45px;
 
     li {
@@ -23,9 +23,70 @@ header {
     }
   }
 
-  .info {
+  .mobile-menu,
+  a.openMobileMenu {
+    display: none;
+  }
+
+  @media screen and (max-width: $mobile-max-width ) {
+    .main-menu {
+      display: none;
+    }
+
+    a.openMobileMenu,
+    a.closeMobileMenu {
+      display: block;
+      width: 24px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      margin: 0;
+
+      span {
+        height: 5px;
+        margin-bottom: 3px;
+        background-color: #000;
+        display: block;
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      right: 0;
+      top: 0;
+
+      &.is-open {
+        display: block;
+        background-color: #ebebeb;
+        text-align: left;
+        width: 320px;
+        height: 100%;
+        padding: 10px;
+        z-index: 10;
+      }
+
+      ul {
+        li {
+          padding: 7px 0;
+        }
+      }
+    }
+  }
+
+  .contact-info {
     position: absolute;
     right: 20px;
     bottom: 10px;
   }
+
+  @media screen and (max-width: $mobile-max-width ) {
+    .contact-info {
+      position: relative;
+      right: 0;
+      bottom: 0;
+      margin: 20px;
+    }
+  }
+
 }
