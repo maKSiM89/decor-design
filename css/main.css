@@ -1,3 +1,6 @@
+.flex {
+  display: flex; }
+
 .align-center-h {
   display: flex;
   flex-direction: row;
@@ -33,6 +36,51 @@
   flex-direction: column;
   align-items: stretch; }
 
+.align-stretch-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch; }
+
+.align-wrap {
+  flex-wrap: wrap; }
+
+.flex-15 {
+  display: flex;
+  flex: 0 1 5%; }
+
+.flex-20 {
+  display: flex;
+  flex: 0 1 20%; }
+
+.flex-25 {
+  display: flex;
+  flex: 0 1 25%; }
+
+.flex-30 {
+  display: flex;
+  flex: 0 1 30%; }
+
+.flex-50 {
+  display: flex;
+  flex: 0 1 50%; }
+
+.flex-60 {
+  display: flex;
+  flex: 0 1 60%; }
+
+.flex-70 {
+  display: flex;
+  flex: 0 1 70%; }
+
+/*
+.wrapper {
+  @include flexbox();
+}
+
+.item {
+  @include flex(1 200px);
+  @include order(2);
+}*/
 header {
   position: relative;
   text-align: center;
@@ -74,7 +122,7 @@ header {
       top: 0; }
       header .mobile-menu.is-open {
         display: block;
-        background-color: #ebebeb;
+        background-color: #d5d5d5;
         text-align: left;
         width: 320px;
         height: 100%;
@@ -162,19 +210,36 @@ footer {
   margin: 40px 0 0px 0; }
   .container.interior .left-menu {
     text-align: left;
-    flex-basis: 18%;
     padding-top: 80px; }
     .container.interior .left-menu nav ul li {
       padding: 10px; }
       .container.interior .left-menu nav ul li.active {
         background-color: #d5d5d5; }
   .container.interior .content {
-    flex-flow: row wrap;
-    align-content: stretch; }
+    padding: 0 20px; }
     .container.interior .content .box {
-      padding: 20px; }
+      padding: 20px;
+      max-width: 320px; }
       .container.interior .content .box img {
-        margin-bottom: 15px; }
+        margin-bottom: 15px;
+        width: 100%; }
+    .container.interior .content .infoBlock {
+      padding: 0 20px; }
+      .container.interior .content .infoBlock ul {
+        padding-left: 15px; }
+      .container.interior .content .infoBlock p.note {
+        padding-left: 15px; }
+    .container.interior .content .orderBlock {
+      padding: 20px 0; }
+      .container.interior .content .orderBlock .form-group {
+        margin: 5px; }
+        .container.interior .content .orderBlock .form-group .form-control {
+          background-color: #d5d5d5; }
+    .container.interior .content .imgBlock {
+      max-width: 300px;
+      padding-bottom: 20px; }
+      .container.interior .content .imgBlock img {
+        width: 100%; }
 
 a {
   color: #000; }
@@ -194,5 +259,26 @@ a {
 
 .list-style-none {
   list-style: none; }
+
+.pullRight {
+  float: right; }
+
+.pullLeft {
+  float: left; }
+
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
+
+.align-center {
+  text-align: center; }
+
+.padding-5 {
+  padding: 5px; }
+
+.padding-10 {
+  padding: 10px; }
 
 /*# sourceMappingURL=main.css.map */

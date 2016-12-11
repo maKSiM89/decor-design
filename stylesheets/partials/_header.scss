@@ -1,7 +1,7 @@
 header {
   position: relative;
   text-align: center;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: $line-border;
   padding-top: 20px;
 
   .logo {
@@ -58,7 +58,7 @@ header {
 
       &.is-open {
         display: block;
-        background-color: #ebebeb;
+        background-color: #d5d5d5;
         text-align: left;
         width: 320px;
         height: 100%;

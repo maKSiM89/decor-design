@@ -5,7 +5,6 @@
 
     .left-menu {
       text-align: left;
-      flex-basis: 18%;
       padding-top: 80px;
 
       nav {
@@ -22,14 +21,48 @@
     }
 
     .content {
-      flex-flow: row wrap;
-      align-content: stretch;
+      padding: 0 20px;
 
       .box {
         padding: 20px;
+        max-width: 320px;
 
         img {
           margin-bottom: 15px;
+          width: 100%;
+        }
+      }
+
+      .infoBlock {
+        padding: 0 20px;
+
+        ul {
+          padding-left: 15px;
+        }
+
+        p.note {
+          padding-left: 15px;
+        }
+      }
+
+      .orderBlock {
+        padding: 20px 0;
+
+        .form-group {
+          margin: 5px;
+
+          .form-control {
+            background-color: #d5d5d5;
+          }
+        }
+      }
+
+      .imgBlock {
+        max-width: 300px;
+        padding-bottom: 20px;
+
+        img {
+          width: 100%;
         }
       }
     }
