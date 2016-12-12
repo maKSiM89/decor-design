@@ -88,3 +88,7 @@
   display: flex;
   flex: 0 1 70%;
 }
+
+.noshrink {
+  flex-shrink: 0;
+}

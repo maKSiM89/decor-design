@@ -72,6 +72,9 @@
   display: flex;
   flex: 0 1 70%; }
 
+.noshrink {
+  flex-shrink: 0; }
+
 /*
 .wrapper {
   @include flexbox();
@@ -210,7 +213,8 @@ footer {
   margin: 40px 0 0px 0; }
   .container.interior .left-menu {
     text-align: left;
-    padding-top: 80px; }
+    padding-top: 80px;
+    min-width: 220px; }
     .container.interior .left-menu nav ul li {
       padding: 10px; }
       .container.interior .left-menu nav ul li.active {
