@@ -1,4 +1,5 @@
 .container {
+  width: 100%;
 
   &.interior {
     margin: 40px 0 0px 0;
@@ -6,7 +7,7 @@
     .left-menu {
       text-align: left;
       padding-top: 80px;
-      min-width: 220px;
+      min-width: 200px;
 
       nav {
         ul {
@@ -18,6 +19,14 @@
             }
           }
         }
+      }
+    }
+
+    @media screen and (max-width: $mobile-max-width ) {
+      .left-menu {
+        padding-top: 0;
+        border-bottom: $line-border;
+        margin-bottom: 35px;
       }
     }
 
@@ -34,26 +43,40 @@
         }
       }
 
-      .infoBlock {
-        padding: 0 20px;
-
-        ul {
-          padding-left: 15px;
-        }
-
-        p.note {
-          padding-left: 15px;
-        }
-      }
-
       .orderBlock {
-        padding: 20px 0;
+        padding-right: 40px;
 
-        .form-group {
-          margin: 5px;
+        .info {
+          padding: 0 20px;
 
-          .form-control {
-            background-color: #d5d5d5;
+          ul {
+            padding-left: 15px;
+          }
+
+          p.note {
+            padding-left: 15px;
+          }
+        }
+
+        form {
+          padding: 20px 0;
+
+          .form-group {
+            margin: 5px;
+
+            button {
+              background-color: #ccc;
+            }
+
+            .form-control {
+              background-color: #d5d5d5;
+            }
+
+            &.comments {
+              textarea {
+                height: 134px;
+              }
+            }
           }
         }
       }
@@ -64,6 +87,21 @@
 
         img {
           width: 100%;
+        }
+      }
+
+      .mapBlock {
+        padding-bottom: 20px;
+        height: 400px;
+      }
+
+      @media screen and (max-width: $mobile-max-width ) {
+        .imgBlock {
+          display: none;
+        }
+
+        .mapBlock {
+          height: auto;
         }
       }
     }

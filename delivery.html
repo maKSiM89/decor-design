@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tandem Flowers</title>
+    <title>Tandem Flowers - Order page</title>
     <link type="text/css" rel="stylesheet" href="css/bootstrap-reboot.css"/>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
     <link type="text/css" rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
     <header>
         <a href="/" class="logo">
-            <img src="img/logo_site1.png" alt=""/>
+            <img src="img/logo_site1.png" alt="" class="img-responsive"/>
         </a>
         <nav class="upcase">
             <ul class="main-menu list-style-none">
@@ -65,42 +66,52 @@
 
     <section class="container interior">
         <div class="align-center-h">
-            <aside class="left-menu">
+            <aside class="left-menu align-left-h">
                 <nav class="upcase">
                     <ul class="list-style-none">
+                         <li>
+                            <a href="tandem_flowers.html">Букети</a>
+                        </li>
+                        <li>
+                            <a href="order.html">Замовлення</a>
+                        </li>
                         <li class="active">
-                            <a href="#">Букети</a>
-                        </li>
-                        <li>
-                            <a href="#">Замовлення</a>
-                        </li>
-                        <li>
-                            <a href="#">Доставка</a>
+                            <a href="delivery.html">Доставка</a>
                         </li>
                     </ul>
                 </nav>
             </aside>
-            <div class="align-center-h content">
-                <div class="box">
-                    <img src="img/Bucket1.png" alt=""/>
-                    <h3 class="upcase">Букет 1</h3>
-                    <span> ціна 300 грн.</span>
+            <div class="content align-left-h">
+                <div class="align-top-v align-left orderBlock">
+                    <div class="info">
+                        <h3 class="text-uppercase">
+                            Доставка по Ужгороду!
+                        </h3>
+                        <p>
+                            Готові букети ми бережно пакуємо в крафт-папір, щоб букети зберегли свій зовнішній вигляд.
+                        </p>
+                        <p>
+                            Ви можете забрати букет самостійно, приїхавши в нашу майстерню в ТЦ "Токіо" (вхід з вулиці біля Comfy), вул. Легоцького, 19а.
+                        <p>
+
+                        <p>
+                            Також ми дбайливо доставляємо наші букети по Ужгороду:
+                            <ul class="list-style-none">
+                                <li>по місту - 40 грн</li>
+                                <li>в будь-яке інше місце - за попередньою домовленістю</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="align-stretch-h mapBlock">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2638.0755045388996!2d22.265186950901715!3d48.60839797916204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473918f99ce99a35%3A0x5957f9d85e6d5b0f!2sTokyo!5e0!3m2!1sru!2sua!4v1481537018113"
+                            width="100%" frameborder="0" style="border:0" allowfullscreen
+                        ></iframe>
+                    </div>
                 </div>
-                <div class="box">
-                    <img src="img/Bucket2.png" alt=""/>
-                    <h3 class="upcase">Букет 1</h3>
-                    <span> ціна 300 грн.</span>
+                <div class="imgBlock pullRight noshrink">
+                    <img src="img/Buket.jpg" alt="Букетик" class="img-responsive">
                 </div>
-                <div class="box">
-                    <img src="img/Bucket3.png" alt=""/>
-                    <h3 class="upcase">Букет 1</h3>
-                    <span> ціна 300 грн.</span>
-                </div>
-                <!--<div class="box">
-                    <img src="img/Bucket3.png" alt=""/>
-                    <h3 class="upcase">Букет 1</h3>
-                    <span> ціна 300 грн.</span>
-                </div>-->
             </div>
         </div>
     </section>
@@ -122,7 +133,7 @@
         <a href="skype:+380997260036">(099) 72 600 36</a>
     </footer>
     <script src="js/lib/jquery-3.1.1.js"></script>
-    <script src="js/lib/jquery.mobile.min.js"></script>
+    <script src="js/main.mobile.js"></script>
     <script src="js/slider.js"></script>
 </body>
 </html>

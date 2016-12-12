@@ -1,80 +1,80 @@
-.flex {
-  display: flex; }
+@media (min-width: 736px) {
+  .flex {
+    display: flex; }
 
-.align-center-h {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
+  .align-center-h {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
 
-.align-right-h {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end; }
+  .align-right-h {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; }
 
-.align-left-h {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start; }
+  .align-left-h {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; }
 
-.align-center-v {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  .align-center-v {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
 
-.align-bottom-v {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; }
+  .align-bottom-v {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
 
-.align-top-v {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; }
+  .align-top-v {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
 
-.align-stretch-h {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch; }
+  .align-stretch-h {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; }
 
-.align-stretch-v {
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch; }
+  .align-stretch-v {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch; }
 
-.align-wrap {
-  flex-wrap: wrap; }
+  .align-wrap {
+    flex-wrap: wrap; }
 
-.flex-15 {
-  display: flex;
-  flex: 0 1 5%; }
+  .flex-15 {
+    display: flex;
+    flex: 0 1 5%; }
 
-.flex-20 {
-  display: flex;
-  flex: 0 1 20%; }
+  .flex-20 {
+    display: flex;
+    flex: 0 1 20%; }
 
-.flex-25 {
-  display: flex;
-  flex: 0 1 25%; }
+  .flex-25 {
+    display: flex;
+    flex: 0 1 25%; }
 
-.flex-30 {
-  display: flex;
-  flex: 0 1 30%; }
+  .flex-30 {
+    display: flex;
+    flex: 0 1 30%; }
 
-.flex-50 {
-  display: flex;
-  flex: 0 1 50%; }
+  .flex-50 {
+    display: flex;
+    flex: 0 1 50%; }
 
-.flex-60 {
-  display: flex;
-  flex: 0 1 60%; }
+  .flex-60 {
+    display: flex;
+    flex: 0 1 60%; }
 
-.flex-70 {
-  display: flex;
-  flex: 0 1 70%; }
+  .flex-70 {
+    display: flex;
+    flex: 0 1 70%; }
 
-.noshrink {
-  flex-shrink: 0; }
-
+  .noshrink {
+    flex-shrink: 0; } }
 /*
 .wrapper {
   @include flexbox();
@@ -209,41 +209,62 @@ footer {
     footer p.social a img {
       width: 30px; }
 
-.container.interior {
-  margin: 40px 0 0px 0; }
-  .container.interior .left-menu {
-    text-align: left;
-    padding-top: 80px;
-    min-width: 220px; }
-    .container.interior .left-menu nav ul li {
-      padding: 10px; }
-      .container.interior .left-menu nav ul li.active {
-        background-color: #d5d5d5; }
-  .container.interior .content {
-    padding: 0 20px; }
-    .container.interior .content .box {
-      padding: 20px;
-      max-width: 320px; }
-      .container.interior .content .box img {
-        margin-bottom: 15px;
-        width: 100%; }
-    .container.interior .content .infoBlock {
-      padding: 0 20px; }
-      .container.interior .content .infoBlock ul {
-        padding-left: 15px; }
-      .container.interior .content .infoBlock p.note {
-        padding-left: 15px; }
-    .container.interior .content .orderBlock {
-      padding: 20px 0; }
-      .container.interior .content .orderBlock .form-group {
-        margin: 5px; }
-        .container.interior .content .orderBlock .form-group .form-control {
+.container {
+  width: 100%; }
+  .container.interior {
+    margin: 40px 0 0px 0; }
+    .container.interior .left-menu {
+      text-align: left;
+      padding-top: 80px;
+      min-width: 200px; }
+      .container.interior .left-menu nav ul li {
+        padding: 10px; }
+        .container.interior .left-menu nav ul li.active {
           background-color: #d5d5d5; }
-    .container.interior .content .imgBlock {
-      max-width: 300px;
-      padding-bottom: 20px; }
-      .container.interior .content .imgBlock img {
-        width: 100%; }
+    @media screen and (max-width: 736px) {
+      .container.interior .left-menu {
+        padding-top: 0;
+        border-bottom: 2px solid #e0e0e0;
+        margin-bottom: 35px; } }
+    .container.interior .content {
+      padding: 0 20px; }
+      .container.interior .content .box {
+        padding: 20px;
+        max-width: 320px; }
+        .container.interior .content .box img {
+          margin-bottom: 15px;
+          width: 100%; }
+      .container.interior .content .orderBlock {
+        padding-right: 40px; }
+        .container.interior .content .orderBlock .info {
+          padding: 0 20px; }
+          .container.interior .content .orderBlock .info ul {
+            padding-left: 15px; }
+          .container.interior .content .orderBlock .info p.note {
+            padding-left: 15px; }
+        .container.interior .content .orderBlock form {
+          padding: 20px 0; }
+          .container.interior .content .orderBlock form .form-group {
+            margin: 5px; }
+            .container.interior .content .orderBlock form .form-group button {
+              background-color: #ccc; }
+            .container.interior .content .orderBlock form .form-group .form-control {
+              background-color: #d5d5d5; }
+            .container.interior .content .orderBlock form .form-group.comments textarea {
+              height: 134px; }
+      .container.interior .content .imgBlock {
+        max-width: 300px;
+        padding-bottom: 20px; }
+        .container.interior .content .imgBlock img {
+          width: 100%; }
+      .container.interior .content .mapBlock {
+        padding-bottom: 20px;
+        height: 400px; }
+      @media screen and (max-width: 736px) {
+        .container.interior .content .imgBlock {
+          display: none; }
+        .container.interior .content .mapBlock {
+          height: auto; } }
 
 a {
   color: #000; }

@@ -11,7 +11,7 @@
 <body>
     <header>
         <a href="/" class="logo">
-            <img src="img/logo_site1.png" alt=""/>
+            <img src="img/logo_site1.png" alt="" class="img-responsive"/>
         </a>
         <nav class="upcase">
             <ul class="main-menu list-style-none">
@@ -81,9 +81,9 @@
                     </ul>
                 </nav>
             </aside>
-            <div class="content align-right-h">
-                <div class="align-top-v align-left">
-                    <div class="infoBlock">
+            <div class="content align-left-h">
+                <div class="align-top-v align-left orderBlock">
+                    <div class="info">
                         <p>
                             Наші дівчатка з радістю складуть для вас неповторний букетик
                             з надзвичайною любов"ю. Ви можете самі вибрати розмір, кольори та настрій букету.
@@ -113,33 +113,39 @@
                             А ще краще завітайте до нас у майстерню, і ви зможете переглянути будь-який букетик чи замовити індивідуальний.
                         </p>
                     </div>
-                    <form class="orderBlock align-left-h" method="post" action="">
+                    <form class="align-left-h" method="post" action="">
                         <div class="align-stretch-v flex-50">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Name">
+                                <input type="text" class="form-control" placeholder="Ім'я">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="+38 (xxx) xxx-xx-xx">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="E-Mail Address">
+                                <input type="email" class="form-control" placeholder="Поштова адреса">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Size">
+                                <select class="form-control" name="size">
+                                    <option value="0">Оберіть розмір...</option>
+                                    <option value="S"><i>S</i> - 20-25 см - 300 грн.</option>
+                                    <option value="M"><i>M</i> - 30-35 см - 500-600 грн.</option>
+                                    <option value="L"><i>L</i> - 40-45 см - від 800 грн.</option>
+                                    <option value="XL"><i>XL</i> - від 50 см - 1500 грн.</option>
+                                </select>
                             </div>
                         </div>
                         <div class="align-stretch-v flex-50">
-                            <div class="form-group">
-                                <textarea class="form-control">Please leave you comment here...</textarea>
+                            <div class="form-group comments">
+                                <textarea class="form-control" placeholder="Коментар"></textarea>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-default">Send</button>
+                                <button type="submit" class="btn btn-default btn-block">Відправити</button>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="imgBlock pullRight noshrink">
-                    <img src="img/order_page.jpg" alt="Order page image">
+                    <img src="img/order_page.jpg" alt="Хаха" class="img-responsive">
                 </div>
             </div>
         </div>
