@@ -90,7 +90,7 @@ header {
   border-bottom: 2px solid #e0e0e0;
   padding-top: 20px; }
   header .logo img {
-    max-width: 200px; }
+    max-width: 350px; }
   header .main-menu {
     margin-top: 45px; }
     header .main-menu li {
@@ -189,11 +189,10 @@ header {
     border-top: 2px solid #e0e0e0; }
     .container .categories a {
       display: inline-block;
-      max-width: 300px;
+      max-width: 350px;
       padding: 20px; }
       .container .categories a img {
-        max-width: 200px;
-        min-height: 200px;
+        max-width: 300px;
         margin-top: 15px; }
 
 footer {
@@ -215,12 +214,13 @@ footer {
     margin: 40px 0 0px 0; }
     .container.interior .left-menu {
       text-align: left;
-      padding-top: 80px;
-      min-width: 200px; }
-      .container.interior .left-menu nav ul li {
-        padding: 10px; }
-        .container.interior .left-menu nav ul li.active {
-          background-color: #d5d5d5; }
+      padding-top: 80px; }
+      .container.interior .left-menu nav {
+        width: 100%; }
+        .container.interior .left-menu nav ul li {
+          padding: 10px; }
+          .container.interior .left-menu nav ul li.active {
+            background-color: #d5d5d5; }
     @media screen and (max-width: 736px) {
       .container.interior .left-menu {
         padding-top: 0;
@@ -230,10 +230,13 @@ footer {
       padding: 0 20px; }
       .container.interior .content .box {
         padding: 20px;
-        max-width: 320px; }
+        max-width: 300px; }
         .container.interior .content .box img {
           margin-bottom: 15px;
           width: 100%; }
+        .container.interior .content .box span {
+          font-size: 20px;
+          display: block; }
       .container.interior .content .orderBlock {
         padding-right: 40px; }
         .container.interior .content .orderBlock .info {
