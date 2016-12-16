@@ -9,15 +9,20 @@
 		$( document ).on( 'click', '.slider-nav-items .next', handleClickNextButton );
 	},
 
-	handleClickNavButton = function ( event ) {
+	handleClickNavButton = function ( event, element ) {
 		var navButton = $( '.slider-nav-item--dot' ),
 			index = navButton.index( this ),
 			activeClass = 'active';
 
-		navButton.removeClass( activeClass );
-		$( this ).addClass( activeClass );
-
-		slider.move( index );
+		slider.move( index )
+			.then( function ( data ) {
+				console.log( data );
+				navButton.removeClass( activeClass );
+				$( this ).addClass( activeClass );
+			}.bind( this ) )
+			.catch( function ( error ) {
+				console.log( error );
+			})
 	};
 
 	function handleClickPrevButton( e ) {
@@ -43,8 +48,14 @@
 		};
 
 		function _move( index ) {
-			currentIndex = index;
-			slider.animate( {left: ( -currentIndex * 100 ) + '%'}, 400 );
+			return new Promise( function (resolve, reject) {
+				currentIndex = index;
+				slider.animate( {left: ( -currentIndex * 100 ) + '%'}, 200, function () {
+					resolve( 'animatio completed. Index is ' + currentIndex );
+					
+					reject( new Error( 'Some Error' ) );
+				} );
+			});
 		}
 		
 		function _next() {
