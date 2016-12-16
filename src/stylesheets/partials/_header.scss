@@ -15,6 +15,12 @@ header {
 
     li {
       display: inline-block;
+
+      &.active {
+        a {
+          color: green;
+        }
+      }
     }
 
     li + li:before {
@@ -28,7 +34,7 @@ header {
     display: none;
   }
 
-  @media screen and (max-width: $mobile-max-width ) {
+  @media screen and (max-width: $tablet-min-width ) {
     .main-menu {
       display: none;
     }
@@ -55,6 +61,10 @@ header {
       position: fixed;
       right: 0;
       top: 0;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
 
       &.is-open {
         display: block;
@@ -69,6 +79,12 @@ header {
       ul {
         li {
           padding: 7px 0;
+
+          &.active {
+            a {
+              color: green;
+            }
+          }
         }
       }
     }
@@ -80,13 +96,29 @@ header {
     bottom: 10px;
   }
 
-  @media screen and (max-width: $mobile-max-width ) {
+  @media screen
+  and (min-width: $tablet-min-width)
+  and (max-width: $laptop-min-width ) {
     .contact-info {
-      position: relative;
-      right: 0;
-      bottom: 0;
-      margin: 20px;
+      bottom: 64px;
     }
   }
 
+  @media screen
+  and (max-width: $tablet-min-width ) {
+    .contact-info {
+      text-align: center;
+      position: relative;
+      right: 0;
+      bottom: 0;
+      top: 20px;
+    }
+  }
+
+}
+
+@media screen and (max-width: $tablet-min-width ) {
+  header {
+    padding-bottom: 30px;
+  }
 }
