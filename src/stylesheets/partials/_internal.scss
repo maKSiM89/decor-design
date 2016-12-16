@@ -35,8 +35,14 @@
       padding: 0 20px;
 
       &.infoPage {
-        max-width: 800px;
+        max-width: 80%;
         margin: 0 auto;
+      }
+
+      @media ( max-width: $laptop-min-width ) {
+          &.infoPage {
+            max-width: 100%;
+          }
       }
 
       .box {
@@ -60,20 +66,31 @@
           }
       }
 
-      .orderBlock {
-        padding-right: 40px;
+      .info {
+        padding: 0 20px;
+        text-align: justify;
 
-        .info {
-          padding: 0 20px;
+        ul {
+          padding-left: 15px;
+        }
 
-          ul {
-            padding-left: 15px;
-          }
+        p.note {
+          padding-left: 15px;
+        }
 
-          p.note {
-            padding-left: 15px;
+        p.social {
+          text-align: center;
+
+          a {
+            padding: 10px;
+            img {
+              width: 50px;
+            }
           }
         }
+      }
+
+      .orderBlock {
 
         form {
           padding: 20px 0;
@@ -101,6 +118,7 @@
       .imgBlock {
         max-width: 300px;
         padding-bottom: 20px;
+        margin-left: 25px;
 
         img {
           width: 100%;

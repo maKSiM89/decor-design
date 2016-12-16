@@ -244,8 +244,11 @@ footer {
     .container.interior .content {
       padding: 0 20px; }
       .container.interior .content.infoPage {
-        max-width: 800px;
+        max-width: 80%;
         margin: 0 auto; }
+      @media (max-width: 1200px) {
+        .container.interior .content.infoPage {
+          max-width: 100%; } }
       .container.interior .content .box {
         padding: 10px;
         max-width: 300px; }
@@ -258,27 +261,33 @@ footer {
       @media (max-width: 768px) {
         .container.interior .content .box {
           max-width: 100%; } }
-      .container.interior .content .orderBlock {
-        padding-right: 40px; }
-        .container.interior .content .orderBlock .info {
-          padding: 0 20px; }
-          .container.interior .content .orderBlock .info ul {
-            padding-left: 15px; }
-          .container.interior .content .orderBlock .info p.note {
-            padding-left: 15px; }
-        .container.interior .content .orderBlock form {
-          padding: 20px 0; }
-          .container.interior .content .orderBlock form .form-group {
-            margin: 5px; }
-            .container.interior .content .orderBlock form .form-group button {
-              background-color: #ccc; }
-            .container.interior .content .orderBlock form .form-group .form-control {
-              background-color: #d5d5d5; }
-            .container.interior .content .orderBlock form .form-group.comments textarea {
-              height: 134px; }
+      .container.interior .content .info {
+        padding: 0 20px;
+        text-align: justify; }
+        .container.interior .content .info ul {
+          padding-left: 15px; }
+        .container.interior .content .info p.note {
+          padding-left: 15px; }
+        .container.interior .content .info p.social {
+          text-align: center; }
+          .container.interior .content .info p.social a {
+            padding: 10px; }
+            .container.interior .content .info p.social a img {
+              width: 50px; }
+      .container.interior .content .orderBlock form {
+        padding: 20px 0; }
+        .container.interior .content .orderBlock form .form-group {
+          margin: 5px; }
+          .container.interior .content .orderBlock form .form-group button {
+            background-color: #ccc; }
+          .container.interior .content .orderBlock form .form-group .form-control {
+            background-color: #d5d5d5; }
+          .container.interior .content .orderBlock form .form-group.comments textarea {
+            height: 134px; }
       .container.interior .content .imgBlock {
         max-width: 300px;
-        padding-bottom: 20px; }
+        padding-bottom: 20px;
+        margin-left: 25px; }
         .container.interior .content .imgBlock img {
           width: 100%; }
       .container.interior .content .mapBlock {
