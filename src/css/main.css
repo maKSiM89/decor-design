@@ -256,8 +256,10 @@ footer {
           margin-bottom: 15px;
           width: 100%; }
         .container.interior .content .box span {
-          font-size: 20px;
+          font-size: 16px;
           display: block; }
+          .container.interior .content .box span.title {
+            font-size: 20px; }
       @media (max-width: 768px) {
         .container.interior .content .box {
           max-width: 100%; } }
@@ -274,16 +276,18 @@ footer {
             padding: 10px; }
             .container.interior .content .info p.social a img {
               width: 50px; }
-      .container.interior .content .orderBlock form {
+      .container.interior .content form {
         padding: 20px 0; }
-        .container.interior .content .orderBlock form .form-group {
+        .container.interior .content form .form-group {
           margin: 5px; }
-          .container.interior .content .orderBlock form .form-group button {
+          .container.interior .content form .form-group button {
             background-color: #ccc; }
-          .container.interior .content .orderBlock form .form-group .form-control {
+          .container.interior .content form .form-group .form-control {
             background-color: #d5d5d5; }
-          .container.interior .content .orderBlock form .form-group.comments textarea {
+          .container.interior .content form .form-group.comments textarea {
             height: 134px; }
+        .container.interior .content form.contact .form-group textarea {
+          height: 86px; }
       .container.interior .content .imgBlock {
         max-width: 300px;
         padding-bottom: 20px;

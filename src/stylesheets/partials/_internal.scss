@@ -55,8 +55,12 @@
         }
 
         span {
-          font-size: 20px;
+          font-size: 16px;
           display: block;
+
+          &.title {
+            font-size: 20px;
+          }
         }
       }
 
@@ -90,26 +94,31 @@
         }
       }
 
-      .orderBlock {
+      form {
+        padding: 20px 0;
 
-        form {
-          padding: 20px 0;
+        .form-group {
+          margin: 5px;
 
+          button {
+            background-color: #ccc;
+          }
+
+          .form-control {
+            background-color: #d5d5d5;
+          }
+
+          &.comments {
+            textarea {
+              height: 134px;
+            }
+          }
+        }
+
+        &.contact {
           .form-group {
-            margin: 5px;
-
-            button {
-              background-color: #ccc;
-            }
-
-            .form-control {
-              background-color: #d5d5d5;
-            }
-
-            &.comments {
-              textarea {
-                height: 134px;
-              }
+            textarea {
+              height: 86px;
             }
           }
         }
