@@ -25,6 +25,15 @@
       }
     }
 
+    .slider-arrows {
+      background: url( '../img/arrows-2x.png' );
+      z-index: 2;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      height: 50px;
+    }
+
     .slider-nav {
       z-index: 2;
       position: absolute;
