@@ -1,6 +1,21 @@
 ;(function () {
+	var activeClass = 'active',
+		navButton = $( '.slider-nav-item--dot' );
+
 	var init = function () {
 		__attachEvents();
+
+		setInterval(function () {
+			slider.next()
+				.then( function ( data ) {
+					console.log( data );
+					navButton.removeClass( activeClass );
+					$( navButton[data] ).addClass( activeClass );
+				}.bind( this ) )
+				.catch( function ( error ) {
+					console.log( error );
+				})
+		}, 5000);
 	},
 
 	__attachEvents = function () {
@@ -10,16 +25,14 @@
 	},
 
 	handleClickNavButton = function ( event, element ) {
-		var navButton = $( '.slider-nav-item--dot' ),
-			index = navButton.index( this ),
-			activeClass = 'active';
+		var index = navButton.index( this );
 
 		slider.move( index )
 			.then( function ( data ) {
-				console.log( data );
+				console.log( 'current index is: ' + data );
 				navButton.removeClass( activeClass );
-				$( this ).addClass( activeClass );
-			}.bind( this ) )
+				$( navButton[data] ).addClass( activeClass );
+			} )
 			.catch( function ( error ) {
 				console.log( error );
 			})
@@ -48,12 +61,10 @@
 		};
 
 		function _move( index ) {
-			return new Promise( function (resolve, reject) {
+			return new Promise( function (resolve) {
 				currentIndex = index;
-				slider.animate( {left: ( -currentIndex * 100 ) + '%'}, 200, function () {
-					resolve( 'animatio completed. Index is ' + currentIndex );
-					
-					reject( new Error( 'Some Error' ) );
+				slider.animate( {left: ( -currentIndex * 100 ) + '%'}, 500, function () {
+					resolve( currentIndex );
 				} );
 			});
 		}
@@ -64,7 +75,7 @@
 			} else {
 				currentIndex++;
 			}
-			_move( currentIndex );
+			return _move( currentIndex );
 		}
 		
 		function _prev() {
@@ -73,7 +84,7 @@
 			} else {
 				currentIndex--;
 			}
-			_move( currentIndex );
+			return _move( currentIndex );
 		}
 	})();
 
