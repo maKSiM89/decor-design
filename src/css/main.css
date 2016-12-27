@@ -179,12 +179,32 @@ header {
         .container .slider .slider-line .slider-item img {
           max-width: 100%; }
     .container .slider .slider-arrows {
-      background: url("../img/arrows-2x.png");
-      z-index: 2;
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      height: 50px; }
+      display: none;
+      visibility: hidden; }
+      .container .slider .slider-arrows a {
+        background: url("../img/skin.png");
+        z-index: 10;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        outline: none;
+        padding: 0;
+        border: 0; }
+        .container .slider .slider-arrows a.prev {
+          background-position: 0px 0px;
+          left: 50px; }
+        .container .slider .slider-arrows a.next {
+          background-position: -150px -75px;
+          right: 50px; }
+    .container .slider:hover .slider-arrows {
+      display: block;
+      visibility: visible; }
+    @media screen and (max-width: 768px) {
+      .container .slider:hover .slider-arrows {
+        display: none; } }
     .container .slider .slider-nav {
       z-index: 2;
       position: absolute;
@@ -353,5 +373,35 @@ a {
 
 .padding-10 {
   padding: 10px; }
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); }
+  .popup .popup-content {
+    margin: 10% auto;
+    padding: 15px;
+    border: 1px solid #eee;
+    width: 70%;
+    background-color: #fff;
+    position: relative; }
+
+.close-popup {
+  color: #000;
+  position: absolute;
+  font-size: 28px;
+  font-weight: bold;
+  top: -20px;
+  right: -8px; }
+  .close-popup:hover, .close-popup:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */

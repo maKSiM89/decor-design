@@ -26,12 +26,47 @@
     }
 
     .slider-arrows {
-      background: url( '../img/arrows-2x.png' );
-      z-index: 2;
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      height: 50px;
+      display: none;
+      visibility: hidden;
+      
+      a {
+        background: url( '../img/skin.png' );
+        z-index: 10;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        outline: none;
+        padding: 0;
+        border: 0;
+
+        &.prev {
+          background-position: 0px 0px;
+          left: 50px;
+        }
+
+        &.next {
+          background-position: -150px -75px;
+          right: 50px;
+        }
+      }
+    }
+
+    &:hover {
+      .slider-arrows {
+        display: block;
+        visibility: visible;
+      }
+    }
+
+    @media screen and (max-width: $tablet-min-width ) {
+      &:hover {
+        .slider-arrows {
+          display: none;
+        }
+      }
     }
 
     .slider-nav {

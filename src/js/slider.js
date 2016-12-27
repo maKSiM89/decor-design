@@ -7,11 +7,10 @@
 
 		setInterval(function () {
 			slider.next()
-				.then( function ( data ) {
-					console.log( data );
+				.then( function ( index ) {
 					navButton.removeClass( activeClass );
-					$( navButton[data] ).addClass( activeClass );
-				}.bind( this ) )
+					$( navButton[index] ).addClass( activeClass );
+				} )
 				.catch( function ( error ) {
 					console.log( error );
 				})
@@ -20,8 +19,8 @@
 
 	__attachEvents = function () {
 		$( document ).on( 'click', '.slider-nav-item--dot', handleClickNavButton );
-		$( document ).on( 'click', '.slider-nav-items .prev', handleClickPrevButton );
-		$( document ).on( 'click', '.slider-nav-items .next', handleClickNextButton );
+		$( document ).on( 'click', '.slider-arrows .prev', handleClickPrevButton );
+		$( document ).on( 'click', '.slider-arrows .next', handleClickNextButton );
 	},
 
 	handleClickNavButton = function ( event, element ) {
@@ -40,12 +39,26 @@
 
 	function handleClickPrevButton( e ) {
 		e.preventDefault();
-		slider.prev();
+		slider.prev()
+			.then( function ( index ) {
+				navButton.removeClass( activeClass );
+				$( navButton[index] ).addClass( activeClass );
+			} )
+			.catch( function ( error ) {
+				console.log( error );
+			});
 	}
 
 	function handleClickNextButton( e ) {
 		e.preventDefault();
-		slider.next();
+		slider.next()
+			.then( function ( index ) {
+				navButton.removeClass( activeClass );
+				$( navButton[index] ).addClass( activeClass );
+			} )
+			.catch( function ( error ) {
+				console.log( error );
+			});
 	}
 
 	// slider object
