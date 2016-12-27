@@ -390,7 +390,8 @@ a {
     border: 1px solid #eee;
     width: 70%;
     background-color: #fff;
-    position: relative; }
+    position: relative;
+    text-align: center; }
 
 .close-popup {
   color: #000;
