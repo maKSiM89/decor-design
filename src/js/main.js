@@ -8,26 +8,22 @@
 
 	__attachEvents = function () {
 		$( 'a.show-popup' ).on( 'click', handleShowPopup );
+		$( '.close-popup' ).on( 'click', handleHidePopup );
 	};
 
 	function handleShowPopup( event ) {
 		var img = $( this ).find( 'img' ),
-			imgSrc = img.attr( 'src' ) || '';
+			imgSrc = img.attr( 'src' );
 
 		event.preventDefault();
 		popupImg.attr( 'src', imgSrc );
 
-		if ( imgSrc ) {
-			popupElement.show();
-			$( '.close-popup' ).on( 'click', handleHidePopup );
-		}
+		popupElement.show();
 	}
 
 	function handleHidePopup( event ) {
 		event.preventDefault();
 		popupElement.hide();
-
-		$( '.close-popup' ).off( 'click', handleHidePopup );
 	}
 
 	$( document ).ready( function () {

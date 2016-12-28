@@ -10,25 +10,28 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 10%;
 
     .popup-content {
-      margin: 10% auto;
+      margin: auto;
       padding: 15px;
       border: 1px solid #eee;
       width: 70%;
+      max-width: 800px;
       background-color: #fff;
-      position: relative;
       text-align: center;
     }
   }
 
   .close-popup {
-    color: #a1a1a1;
+    color: #f1f1f1;
     position: absolute;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
-    top: -8px;
-    right: 2px;
+    font-weight: bold;
+    top: 15px;
+    right: 35px;
+    transition: 0.3s;
 
     &:hover,
     &:focus {
