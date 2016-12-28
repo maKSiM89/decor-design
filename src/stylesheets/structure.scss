@@ -57,7 +57,7 @@
 
   .flex-15 {
     display: flex;
-    flex: 0 1 5%;
+    flex: 0 1 15%;
   }
 
   .flex-20 {
@@ -88,6 +88,16 @@
   .flex-70 {
     display: flex;
     flex: 0 1 70%;
+  }
+
+  .flex-75 {
+    display: flex;
+    flex: 0 1 75%;
+  }
+
+  .flex-80 {
+    display: flex;
+    flex: 0 1 80%;
   }
 
   .noshrink {

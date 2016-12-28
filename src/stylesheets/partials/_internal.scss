@@ -32,7 +32,7 @@
     }
 
     .content {
-      padding: 0 20px;
+      padding: 0 20px 20px 20px;
 
       &.infoPage {
         max-width: 80%;
@@ -47,7 +47,18 @@
 
       .box {
         padding: 10px;
-        max-width: 300px;
+        width: 290px;
+
+        &.small {
+          padding: 5px;
+          width: 120px;
+          height: 100px;
+
+          img {
+            height: 100%;
+            cursor: pointer;
+          }
+        }
 
         img {
           margin-bottom: 15px;
@@ -92,7 +103,7 @@
           a {
             padding: 10px;
             img {
-              width: 50px;
+              height: 30px;
             }
           }
         }
