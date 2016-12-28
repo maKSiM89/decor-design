@@ -411,6 +411,8 @@ a {
       max-width: 800px;
       background-color: #fff;
       text-align: center; }
+      .popup .popup-content img {
+        width: 100%; }
 
   .close-popup {
     color: #f1f1f1;
