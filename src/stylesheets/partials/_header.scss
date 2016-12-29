@@ -21,11 +21,15 @@ header {
           color: green;
         }
       }
+
+      a {
+        font-family: "bwquintapro-blackitalic";
+      }
     }
 
     li + li:before {
-        content: '|';
-        padding: 0 10px;
+      content: '|';
+      padding: 0 10px;
     }
   }
 

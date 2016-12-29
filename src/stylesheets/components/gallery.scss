@@ -5,11 +5,14 @@
 
   .gallery-items {
     width: 75%;
+  }
 
-    @media screen and (max-width: $tablet-min-width ) {
-      .box {
-        display: inline-flex;
-      }
+  @media screen and (max-width: $tablet-min-width ) {
+   .gallery-items {
+      width: 100%;
+    }
+    .box {
+      display: inline-block;
     }
   }
 }
@@ -65,17 +68,26 @@
       &.prev {
         background-position: 0px 0px;
         left: 50px;
+
+        &:hover {
+          background-position: 0px -75px;
+        }
       }
 
       &.next {
-        background-position: -150px -75px;
+        background-position: -150px 0px;
         right: 50px;
+
+        &:hover {
+          background-position: -150px -75px;
+        }
       }
     }
 
     @media screen and (max-width: $tablet-min-width) {
       a {
         top: 10%;
+        display: none;
 
         &.prev {
           left: 15px;

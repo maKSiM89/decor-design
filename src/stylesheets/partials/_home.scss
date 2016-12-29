@@ -45,11 +45,19 @@
         &.prev {
           background-position: 0px 0px;
           left: 15px;
+
+          &:hover {
+            background-position: 0px -75px;
+          }
         }
 
         &.next {
-          background-position: -150px -75px;
+          background-position: -150px 0px;
           right: 15px;
+
+          &:hover {
+            background-position: -150px -75px;
+          }
         }
       }
     }
