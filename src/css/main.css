@@ -105,8 +105,6 @@ header {
       display: inline-block; }
       header .main-menu li.active a {
         color: green; }
-      header .main-menu li a {
-        font-family: "bwquintapro-blackitalic"; }
     header .main-menu li + li:before {
       content: '|';
       padding: 0 10px; }
@@ -300,6 +298,9 @@ footer {
           .container.interior .content .box.small img {
             height: 100%;
             cursor: pointer; }
+        @media (max-width: 768px) {
+          .container.interior .content .box .box {
+            width: auto; } }
         .container.interior .content .box img {
           margin-bottom: 15px;
           width: 100%; }
@@ -312,7 +313,7 @@ footer {
           opacity: 0.7; }
       @media (max-width: 768px) {
         .container.interior .content .box {
-          max-width: 100%; } }
+          width: 100%; } }
       .container.interior .content .info {
         padding: 0 20px;
         text-align: justify; }
@@ -358,7 +359,7 @@ footer {
 
 a {
   color: #000;
-  font-family: "Calibri Light", serif; }
+  font-family: Arial, Helvetica, sans-serif; }
   a:hover {
     cursor: pointer;
     text-decoration: none;
@@ -396,6 +397,9 @@ a {
 
 .padding-10 {
   padding: 10px; }
+
+.typical {
+  font-family: Arial, Helvetica, sans-serif; }
 
 @media screen and (min-width: 768px) {
   .popup {

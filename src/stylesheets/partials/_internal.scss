@@ -60,6 +60,12 @@
           }
         }
 
+        @media ( max-width: $tablet-min-width ) {
+          .box {
+            width: auto;
+          }
+        }
+
         img {
           margin-bottom: 15px;
           width: 100%;
@@ -81,7 +87,7 @@
 
       @media ( max-width: $tablet-min-width ) {
           .box {
-            max-width: 100%;
+            width: 100%;
           }
       }
 
