@@ -8,9 +8,21 @@
 	__attachEvents = function () {
 		$( '.gallery-items img' ).on( 'click', handleShowGallery );
 		$( '.close-popup' ).on( 'click', handleHideGallery );
-		$( document ).on( 'click', '.content .prev', handleClickPrevButton );
-		$( document ).on( 'click', '.content .next', handleClickNextButton );
+		$( 'a.prev' ).on( 'click', handleClickPrevButton );
+		$( 'a.next' ).on( 'click', handleClickNextButton );
+
+		$( '.slide' ).on( 'swipe', handleClickNextButton );
+		swipeDetect( '.gallery-popup .slide', handleSwipeSlider );
 	};
+
+	function handleSwipeSlider( direction ) {
+		if (direction === 'left') {
+			gallery.next();
+		}
+		if (direction === 'right') {
+			gallery.prev();
+		}
+	}
 
 	function handleShowGallery() {
 		var index = $( '.gallery-items img' ).index( this );
@@ -26,6 +38,7 @@
 	}
 
 	function handleClickNextButton() {
+		alert('1');
 		gallery.next();
 	}
 

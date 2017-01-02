@@ -5,47 +5,35 @@
 	var init = function () {
 		__attachEvents();
 
-		setInterval(function () {
+		/*setInterval(function () {
 			slider.next()
 				.then( function ( index ) {
-					navButton.removeClass( activeClass );
-					$( navButton[index] ).addClass( activeClass );
-				} )
-				.catch( function ( error ) {
-					console.log( error );
-				})
-		}, 5000);
+					handleAfterSlideMovementAction( index );
+				});
+		}, 5000);*/
 	},
 
 	__attachEvents = function () {
 		$( document ).on( 'click', '.slider-nav-item--dot', handleClickNavButton );
 		$( document ).on( 'click', '.slider-arrows .prev', handleClickPrevButton );
 		$( document ).on( 'click', '.slider-arrows .next', handleClickNextButton );
+		swipeDetect( '.slider-line', handleSwipeSlider );
 	},
 
 	handleClickNavButton = function ( event, element ) {
 		var index = navButton.index( this );
 
 		slider.move( index )
-			.then( function ( data ) {
-				console.log( 'current index is: ' + data );
-				navButton.removeClass( activeClass );
-				$( navButton[data] ).addClass( activeClass );
-			} )
-			.catch( function ( error ) {
-				console.log( error );
-			})
+			.then( function ( index ) {
+				handleAfterSlideMovementAction( index );
+			});
 	};
 
 	function handleClickPrevButton( e ) {
 		e.preventDefault();
 		slider.prev()
 			.then( function ( index ) {
-				navButton.removeClass( activeClass );
-				$( navButton[index] ).addClass( activeClass );
-			} )
-			.catch( function ( error ) {
-				console.log( error );
+				handleAfterSlideMovementAction( index );
 			});
 	}
 
@@ -59,6 +47,26 @@
 			.catch( function ( error ) {
 				console.log( error );
 			});
+	}
+	
+	function handleSwipeSlider( direction ) {
+		if (direction === 'left') {
+			slider.next()
+				.then( function ( index ) {
+					handleAfterSlideMovementAction( index );
+				});
+		}
+		if (direction === 'right') {
+			slider.prev()
+				.then( function ( index ) {
+					handleAfterSlideMovementAction( index );
+				});
+		}
+	}
+	
+	function handleAfterSlideMovementAction( index ) {
+		navButton.removeClass( activeClass );
+		$( navButton[index] ).addClass( activeClass );
 	}
 
 	// slider object
