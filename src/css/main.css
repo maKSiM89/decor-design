@@ -185,7 +185,8 @@ header {
         display: inline-block;
         width: 100%; }
         .container .slider .slider-line .slider-item img {
-          max-width: 100%; }
+          width: 100%;
+          max-height: 400px; }
     .container .slider .slider-arrows {
       display: none;
       visibility: hidden; }
