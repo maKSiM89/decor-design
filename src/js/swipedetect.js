@@ -3,8 +3,8 @@ var swipeDetect = function (element, callback) {
 		direction,
 		startX, startY,
 		distanceX, distanceY,
-		threshold = 150,
-		restraint = 100,
+		threshold = 75,
+		restraint = 50,
 		allowedTime = 300,
 		elapsedTime, startTime,
 		handleSwipeCallback = callback || function(){};
