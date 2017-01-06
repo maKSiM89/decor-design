@@ -363,7 +363,8 @@ footer {
 
 a {
   color: #000;
-  font-family: "bwquintapro-blackitalic"; }
+  font-family: "bwquintapro-blackitalic";
+  font-weight: normal; }
   a:hover {
     cursor: pointer;
     text-decoration: none;
