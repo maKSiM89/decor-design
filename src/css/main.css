@@ -92,6 +92,9 @@
   @include flex(1 200px);
   @include order(2);
 }*/
+@font-face {
+  font-family: "bwquintapro-blackitalic";
+  src: url("../../src/fonts/bwquintapro-blackitalic.otf") format("opentype"); }
 header {
   position: relative;
   text-align: center;
