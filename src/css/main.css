@@ -360,7 +360,7 @@ footer {
 
 a {
   color: #000;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: bwquintapro-blackitalic; }
   a:hover {
     cursor: pointer;
     text-decoration: none;
@@ -400,7 +400,7 @@ a {
   padding: 10px; }
 
 .typical {
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: bwquintapro-blackitalic; }
 
 @media screen and (min-width: 768px) {
   .popup {
