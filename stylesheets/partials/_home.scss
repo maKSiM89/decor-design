@@ -88,11 +88,8 @@
       background-color: rgba( 56,56,58,.65 );
 
       .slider-nav-items {
-        display: inline-block;
-        height: 28px;
-
         .slider-nav-item--dot {
-          width: 10px;
+          padding: 0 4px;
           height: 10px;
           border: 1px solid #fff;
           border-radius: 100%;
