@@ -232,13 +232,15 @@ header {
       .container .slider .slider-nav .slider-nav-items {
         display: inline-block; }
         .container .slider .slider-nav .slider-nav-items .slider-nav-item--dot {
-          width: 12px;
-          height: 12px;
+          width: 10px;
+          height: 10px;
           border: 1px solid #fff;
           border-radius: 100%;
           cursor: pointer;
           margin: 0 3px;
-          background-color: rgba(56, 56, 58, 0.65); }
+          background-color: rgba(56, 56, 58, 0.65);
+          outline: none;
+          cursor: pointer; }
           .container .slider .slider-nav .slider-nav-items .slider-nav-item--dot.active {
             background-color: #fff;
             cursor: default; }
@@ -363,8 +365,7 @@ footer {
 
 a {
   color: #000;
-  font-family: "bwquintapro-blackitalic";
-  font-weight: normal; }
+  font-family: "bwquintapro-blackitalic"; }
   a:hover {
     cursor: pointer;
     text-decoration: none;
