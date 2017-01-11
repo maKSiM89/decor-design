@@ -20,7 +20,7 @@
             }
 
             a {
-              font-family: "Century Gothic";
+              font-family: "Raleway-Light";
             }
           }
         }
@@ -37,12 +37,12 @@
 
     .content {
       padding: 0 20px 20px 20px;
+      font-size: 14px;
+      line-height: 20px;
 
       &.infoPage {
         max-width: 80%;
         margin: 0 auto;
-        font-size: 14px;
-        line-height: 20px;
       }
 
       @media ( max-width: $laptop-min-width ) {
