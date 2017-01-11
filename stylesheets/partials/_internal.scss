@@ -20,7 +20,7 @@
             }
 
             a {
-              font-family: "bwquintapro-light";
+              font-family: "Century Gothic";
             }
           }
         }
@@ -42,6 +42,7 @@
         max-width: 80%;
         margin: 0 auto;
         font-size: 14px;
+        line-height: 20px;
       }
 
       @media ( max-width: $laptop-min-width ) {

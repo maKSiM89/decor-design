@@ -93,8 +93,8 @@
   @include order(2);
 }*/
 @font-face {
-  font-family: "bwquintapro-light";
-  src: url("../../src/fonts/bwquintapro-light.otf") format("opentype"); }
+  font-family: "Century Gothic";
+  src: url("../../src/fonts/Century Gothic.ttf") format("truetype"); }
 @font-face {
   font-family: "calibril";
   src: url("../../src/fonts/calibril.ttf") format("truetype"); }
@@ -112,7 +112,7 @@ header {
       header .main-menu li.active a {
         color: green; }
       header .main-menu li a {
-        font-family: "bwquintapro-light"; }
+        font-family: "Century Gothic"; }
     header .main-menu li + li:before {
       content: '|';
       padding: 0 10px; }
@@ -286,7 +286,7 @@ footer {
           .container.interior .left-menu nav ul li.active {
             background-color: #d5d5d5; }
           .container.interior .left-menu nav ul li a {
-            font-family: "bwquintapro-light"; }
+            font-family: "Century Gothic"; }
     @media screen and (max-width: 768px) {
       .container.interior .left-menu {
         padding-top: 0;
@@ -297,7 +297,8 @@ footer {
       .container.interior .content.infoPage {
         max-width: 80%;
         margin: 0 auto;
-        font-size: 14px; }
+        font-size: 14px;
+        line-height: 20px; }
       @media (max-width: 1200px) {
         .container.interior .content.infoPage {
           max-width: 100%; } }
