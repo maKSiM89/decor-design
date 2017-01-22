@@ -162,6 +162,8 @@ header {
     right: 20px;
     bottom: 20px;
     text-align: left; }
+    header .contact-info p {
+      margin-bottom: 0rem; }
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     header .contact-info {
       bottom: 64px; } }
@@ -343,7 +345,7 @@ footer {
             .container.interior .content .info p.social a img {
               height: 30px; }
       .container.interior .content form {
-        padding: 20px 0; }
+        padding: 20px 0 0 0; }
         .container.interior .content form .form-group {
           margin: 5px; }
           .container.interior .content form .form-group button {
@@ -415,6 +417,18 @@ a {
 
 .typical {
   font-family: "bwquintapro-blackitalic"; }
+
+.error-input {
+  border: 1px solid red; }
+
+.form-message {
+  font-size: 12px; }
+  .form-message span {
+    display: none; }
+    .form-message span.error {
+      color: red; }
+    .form-message span.notice {
+      color: blue; }
 
 @media screen and (min-width: 768px) {
   .popup {

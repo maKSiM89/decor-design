@@ -41,12 +41,8 @@
 		e.preventDefault();
 		slider.next()
 			.then( function ( index ) {
-				navButton.removeClass( activeClass );
-				$( navButton[index] ).addClass( activeClass );
-			} )
-			.catch( function ( error ) {
-				console.log( error );
-			});
+				handleAfterSlideMovementAction( index );
+			} );
 	}
 	
 	function handleSwipeSlider( direction ) {

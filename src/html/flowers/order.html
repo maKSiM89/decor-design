@@ -111,19 +111,19 @@
                             Готові цікаві композиції завжди наявні у нашій майстерні-бутику, отож чекаємо на Вас!
                         </p>
                     </div>
-                    <form class="align-left-h" method="post" action="">
+                    <form class="align-left-h" method="post" action="" td-validation>
                         <div class="align-stretch-v flex-50">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Ім'я">
+                                <input type="text" class="form-control" placeholder="Ім'я" name="Name">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="+38 (xxx) xxx-xx-xx">
+                                <input type="text" class="form-control" placeholder="+38 (xxx) xxx-xx-xx" name="Phone">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Поштова адреса">
+                                <input type="email" class="form-control" placeholder="Поштова адреса" name="Email">
                             </div>
                             <div class="form-group">
-                                <select class="form-control" name="size">
+                                <select class="form-control" name="Size" >
                                     <option value="0">Оберіть розмір...</option>
                                     <option value="S"><i>S</i> - 20-25 см - 300 грн.</option>
                                     <option value="M"><i>M</i> - 30-35 см - 500-600 грн.</option>
@@ -141,6 +141,14 @@
                             </div>
                         </div>
                     </form>
+                    <div class="form-message">
+                        <span class="error">
+                            Введіть необхідні дані та в правильному форматі, будь ласка!
+                        </span>
+                        <span class="notice">
+                            Дякуємо! Ми зв"яжемось з вами в найближчий час!
+                        </span>
+                    </div>
                 </div>
                 <div class="imgBlock pullRight noshrink">
                     <img src="../../img/flowers/order_page.jpg" alt="" class="img-responsive">
@@ -166,5 +174,6 @@
     </footer>
     <script src="../../js/lib/jquery-3.1.1.js"></script>
     <script src="../../js/main.mobile.js"></script>
+    <script src="../../js/form.validation.js"></script>
 </body>
 </html>

@@ -45,3 +45,23 @@
 .typical {
   font-family: $standardFontFamily;
 }
+
+.error-input {
+  border: 1px solid red;
+}
+
+.form-message {
+  font-size: 12px;
+
+  span {
+    display: none;
+
+    &.error {
+      color: red;
+    }
+
+    &.notice {
+      color: blue;
+    }
+  }
+}
