@@ -104,7 +104,7 @@ header {
   border-bottom: 2px solid #e0e0e0;
   padding-top: 20px; }
   header .logo img {
-    max-width: 350px; }
+    max-width: 320px; }
   header .main-menu {
     margin-top: 45px; }
     header .main-menu li {
@@ -255,10 +255,10 @@ header {
     border-top: 2px solid #e0e0e0; }
     .container .categories a {
       display: inline-block;
-      max-width: 350px;
+      max-width: 320px;
       padding: 20px; }
       .container .categories a img {
-        max-width: 300px;
+        max-width: 100%;
         margin-top: 15px; }
 
 footer {
