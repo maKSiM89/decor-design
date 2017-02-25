@@ -1,6 +1,4 @@
 ;(function () {
-	var activeClass = 'active';
-
 	var init = function () {
 		__attachEvents();
 	},
@@ -8,8 +6,8 @@
 	__attachEvents = function () {
 		$( '.gallery-items img' ).on( 'click', handleShowGallery );
 		$( '.close-popup' ).on( 'click', handleHideGallery );
-		$( 'a.prev' ).on( 'click', handleClickPrevButton );
-		$( 'a.next' ).on( 'click', handleClickNextButton );
+		$( '.gallery-popup a.prev' ).on( 'click', handleClickPrevButton );
+		$( '.gallery-popup a.next' ).on( 'click', handleClickNextButton );
 
 		$( '.slide' ).on( 'swipe', handleClickNextButton );
 		swipeDetect( '.gallery-popup .slide', handleSwipeSlider );
@@ -38,7 +36,6 @@
 	}
 
 	function handleClickNextButton() {
-		alert('1');
 		gallery.next();
 	}
 
@@ -46,7 +43,7 @@
 	var gallery = (function () {
 		var obj = $( '.gallery' ),
 			popup = $( '.gallery-popup' ),
-			items = obj.find( '.box img' ),
+			items = obj.find( '.box > img' ),
 			slideLine = popup.find( '.slide' ),
 			itemsCount = items.length,
 			currentIndex = 0;
@@ -60,7 +57,8 @@
 
 		function _show( index ) {
 			var img = $( items[index] ),
-				imgSrc = img.attr('src'),
+				bigImg = $( img ).next().children( 'img' ),
+				imgSrc = bigImg.attr('src'),
 				slideImg = slideLine.find( 'img' );
 
 			popup.show();
