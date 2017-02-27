@@ -14,7 +14,7 @@
 
 			function handleShowPopup(event) {
 				var img = $(this).find('img'),
-					imgSrc = img.attr('src');
+					imgSrc = img.data('big-image-src');
 
 				event.preventDefault();
 				popupImg.attr('src', imgSrc);
