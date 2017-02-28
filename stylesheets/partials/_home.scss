@@ -23,6 +23,12 @@
           width: 100%;
           max-height: 400px;
         }
+
+        @media screen and (max-width: $tablet-min-width ) {
+          img {
+            max-height: 265px;
+          }
+        }
       }
     }
 
