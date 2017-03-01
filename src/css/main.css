@@ -202,6 +202,12 @@ header {
         .container .slider .slider-line .slider-item img {
           width: 100%;
           max-height: 400px; }
+        @media screen and (max-width: 499px) {
+          .container .slider .slider-line .slider-item img {
+            max-height: 200px; } }
+        @media screen and (min-width: 500px) and (max-width: 768px) {
+          .container .slider .slider-line .slider-item img {
+            max-height: 300px; } }
     .container .slider .slider-arrows {
       display: none;
       visibility: hidden; }
@@ -431,45 +437,40 @@ a {
     .form-message span.notice {
       color: blue; }
 
-@media screen and (min-width: 768px) {
-  .popup {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding-top: 10%; }
-    .popup .popup-content {
-      margin: auto;
-      padding: 15px;
-      border: 1px solid #eee;
-      width: 70%;
-      max-width: 800px;
-      background-color: #fff;
-      text-align: center; }
-      .popup .popup-content img {
-        width: 100%; }
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.2); }
+  .popup .popup-content {
+    margin: auto;
+    padding: 15px;
+    border: 1px solid #eee;
+    width: 70%;
+    max-width: 800px;
+    background-color: #fff;
+    text-align: center; }
+    .popup .popup-content img {
+      width: 100%; }
 
-  .close-popup {
-    color: #f1f1f1;
-    position: absolute;
-    font-size: 40px;
-    font-weight: bold;
-    font-weight: bold;
-    top: 15px;
-    right: 35px;
-    transition: 0.3s; }
-    .close-popup:hover, .close-popup:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer; } }
-@media screen and (max-width: 320px) {
-  .popup {
-    display: none; } }
+.close-popup {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold; }
+  .close-popup:hover, .close-popup:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer; }
+
 .gallery .gallery-title {
   padding-bottom: 36px;
   width: 100%; }
