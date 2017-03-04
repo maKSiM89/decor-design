@@ -20,8 +20,8 @@
 
 .gallery-popup {
   display: none;
-  position: fixed;
   z-index: 1;
+  position: fixed;
   padding-top: 50px;
   left: 0;
   top: 0;
@@ -31,10 +31,10 @@
   background-color: rgba(0, 0, 0, 0.2);
 
   .content {
+    z-index: 2;
     margin: auto;
     padding: 15px;
     border: 1px solid #eee;
-    width: 70%;
     max-width: 800px;
     background-color: #fff;
     text-align: center;

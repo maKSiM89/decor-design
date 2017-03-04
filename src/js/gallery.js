@@ -39,6 +39,15 @@
 		gallery.next();
 	}
 
+	function handleClickOnDocument(event) {
+		var target = event.target,
+			galleryNode = gallery.getNode();
+
+		if (!$.contains(galleryNode[0], target)) {
+			gallery.hide();
+		}
+	}
+
 	// gallery object
 	var gallery = (function () {
 		var obj = $( '.gallery' ),
@@ -52,8 +61,13 @@
 			show: _show,
 			hide: _hide,
 			next: _next,
-			prev: _prev
+			prev: _prev,
+			getNode: getNode
 		};
+
+		function getNode() {
+			return popup;
+		}
 
 		function _show( index ) {
 			var img = $( items[index] ),
@@ -64,11 +78,19 @@
 			popup.show();
 			currentIndex = index;
 			slideImg.attr( 'src', imgSrc );
+
+			setTimeout(function () {
+				$(document).on('click', handleClickOnDocument);
+			}, 0);
 		}
 
 		function _hide() {
 			popup.hide();
 			currentIndex = 0;
+
+			setTimeout(function () {
+				$(document).off('click', handleClickOnDocument);
+			}, 0);
 		}
 
 		function _next() {

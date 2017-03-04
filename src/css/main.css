@@ -104,7 +104,7 @@ header {
   border-bottom: 2px solid #e0e0e0;
   padding-top: 20px; }
   header .logo img {
-    max-width: 320px; }
+    max-width: 400px; }
   header .main-menu {
     margin-top: 45px; }
     header .main-menu li {
@@ -265,7 +265,7 @@ header {
     border-top: 2px solid #e0e0e0; }
     .container .categories a {
       display: inline-block;
-      max-width: 320px;
+      max-width: 400px;
       padding: 20px; }
       .container .categories a img {
         max-width: 100%;
@@ -452,7 +452,6 @@ a {
     margin: auto;
     padding: 15px;
     border: 1px solid #eee;
-    width: 70%;
     max-width: 800px;
     background-color: #fff;
     text-align: center; }
@@ -484,8 +483,8 @@ a {
 
 .gallery-popup {
   display: none;
-  position: fixed;
   z-index: 1;
+  position: fixed;
   padding-top: 50px;
   left: 0;
   top: 0;
@@ -494,10 +493,10 @@ a {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.2); }
   .gallery-popup .content {
+    z-index: 2;
     margin: auto;
     padding: 15px;
     border: 1px solid #eee;
-    width: 70%;
     max-width: 800px;
     background-color: #fff;
     text-align: center; }
@@ -550,5 +549,3 @@ a {
       color: #999;
       text-decoration: none;
       cursor: pointer; }
-
-/*# sourceMappingURL=main.css.map */

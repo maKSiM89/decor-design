@@ -1,63 +1,78 @@
 ;(function () {
 	var popupElement = $('.popup'),
-			popupImg = popupElement.find('img');
+		popupImg = popupElement.find('img');
 
-			function init() {
-				__attachEvents();
-			}
+		function init() {
+			__attachEvents();
+		}
 
-			function __attachEvents() {
-				$('a.show-popup').on('click', handleShowPopup);
-				$('.close-popup').on('click', handleHidePopup);
-				$('button[type=submit]').click(handleSubmitCollectionForm);
-			}
+		function __attachEvents() {
+			$('a.show-popup').on('click', handleShowPopup);
+			$('.close-popup').on('click', handleHidePopup);
+			$('button[type=submit]').click(handleSubmitCollectionForm);
+		}
 
-			function handleShowPopup(event) {
-				var img = $(this).find('img'),
-					imgSrc = img.data('big-image-src');
+		function handleClickOnDocument(event) {
+			var target = event.target;
 
-				event.preventDefault();
-				popupImg.attr('src', imgSrc);
-
-				popupElement.show();
-			}
-
-			function handleHidePopup(event) {
-				event.preventDefault();
+			if (!$.contains(popupElement[0], target)) {
 				popupElement.hide();
 			}
+		}
 
-			function handleSubmitCollectionForm(e) {
-				var form = $( this ).parents('form'),
-					isValid = true;
+		function handleShowPopup(event) {
+			var img = $(this).find('img'),
+				imgSrc = img.data('big-image-src');
 
-				e.preventDefault();
+			event.preventDefault();
+			popupImg.attr('src', imgSrc);
 
-				isValid = formValidator.validate( form );
-				if (isValid) {
-					$.post(
-						form.attr('action'),
-						form.serialize(),
-						function() {
-							showMessage(true);
-						}
-					);
-				} else {
-					showMessage(false);
-				}
+			popupElement.show();
+			setTimeout(function () {
+				$(document).on('click', handleClickOnDocument);
+			}, 0);
+		}
+
+		function handleHidePopup(event) {
+			event.preventDefault();
+			popupElement.hide();
+
+			setTimeout(function () {
+				$(document).off('click', handleClickOnDocument);
+			}, 0);
+		}
+
+		function handleSubmitCollectionForm(e) {
+			var form = $( this ).parents('form'),
+				isValid = true;
+
+			e.preventDefault();
+
+			isValid = formValidator.validate( form );
+			if (isValid) {
+				$.post(
+					form.attr('action'),
+					form.serialize(),
+					function() {
+						showMessage(true);
+					}
+				);
+			} else {
+				showMessage(false);
 			}
+		}
 
-			function showMessage( isValid ) {
-				var errorMessage = $( '.form-message .error' ),
-					noticeMessage = $( '.form-message .notice' );
+		function showMessage( isValid ) {
+			var errorMessage = $( '.form-message .error' ),
+				noticeMessage = $( '.form-message .notice' );
 
-				if (!isValid) {
-					noticeMessage.hide();
-					errorMessage.show();
-				} else {
-					errorMessage.hide();
-					noticeMessage.show();
-				}
+			if (!isValid) {
+				noticeMessage.hide();
+				errorMessage.show();
+			} else {
+				errorMessage.hide();
+				noticeMessage.show();
+			}
 		}
 
 		$(document).ready(function () {
